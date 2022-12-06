@@ -11,6 +11,7 @@ Base = declarative_base()
 class Follower(Base):
     user_from_id = Column(Integer, ForeignKey('user.id'), primary_key=True)
     user_to_id = Column(Integer, ForeignKey('user.id'), primary_key=True)
+    
 class User(Base):
     __tablename__ = 'user'
     # Here we define columns for the table person
